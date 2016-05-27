@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
+    # Registration is not needed here when using the default flow.
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,3 +105,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Registration
+ACCOUNT_ACTIVATION_DAYS = 1 # How long the user has to activate via the email link 
