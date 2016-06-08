@@ -8,5 +8,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'main.views.index', name='index'),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^user/([A-Za-z0-9_]+)/$', 'main.views.profile', name='profile'),
+    url(r'^logout/$', 'main.views.logout_view', name='logout_view'),
+    url(r'^accounts/$', include('registration.backends.simple.urls')),
 ]

@@ -6,5 +6,8 @@
 {% endblock %}
 
 {% block content %}
+<form method="post" class="register-form form-vertical" role="form">
+{% csrf_token %}
 {{form.as_p}}
+<input type="submit" class="save btn btn-default" value="Register" />
 {% endblock %}
