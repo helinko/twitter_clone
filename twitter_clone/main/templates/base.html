@@ -31,7 +31,7 @@
       </ul>
       {% if user.is_authenticated %}
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/{{request.user}}/">Profile <span class="glyphicon glyphicon-log-out"/></a></li>
+        <li><a href="/user/{{request.user}}/">Profile</a></li>
         <li><a href="/logout/">Logout <span class="glyphicon glyphicon-log-out"/></a></li>
       </ul>
       {% endif %}

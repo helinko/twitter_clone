@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'MyAuth',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,4 +108,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Registration
-ACCOUNT_ACTIVATION_DAYS = 1 # How long the user has to activate via the email link 
+ACCOUNT_ACTIVATION_DAYS = 1 # How long the user has to activate via the email link
+AUTH_USER_MODEL = 'MyAuth.MyUser'

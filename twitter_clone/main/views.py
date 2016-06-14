@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import logout
 
@@ -18,9 +17,7 @@ def index(request):
         form = AuthenticationForm()
         return render(request, 'index.html', {'form': form})
     elif request.method == 'POST':
-        # Logging in
-
-        ### !!! IS THIS OK?
+        # Logging in. Following the examples in Django docs.
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
@@ -48,6 +45,6 @@ def logout_view(request):
         logout(request)
         context = {'message': "You have been successfully logged out. "}
         return render(request, 'general.html', context)
-def profile(request):
-    context = {'message': "Profile page"}
+def profile(request, username):
+    context = {'message': username + "'s profile page"}
     return render(request, 'general.html', context)

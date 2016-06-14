@@ -1,3 +1,5 @@
 twitenv/
 twitter_clone/twitter_clone/__pycache__/
 twitter_clone/main/__pycache__/
+twitter_clone/MyAuth/__pycache__/
+twitter_clone/MyAuth/migrations/__pycache__/
